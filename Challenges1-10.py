@@ -32,5 +32,28 @@ def Challenge1H():
         if (floor+1 == ceiling):
             print(str(floor+1) + " is your number")
             break
-       
-Challenge1H()
+
+# Challenge 2 (Easy)
+# Implement a calculate that has impact on daily life (living in bangkok so converting money from Baht to NZD or visa-versa)
+# https://www.reddit.com/r/dailyprogrammer/comments/pjbj8/easy_challenge_2/
+def CurrencyConverter(amount, isConvertingToThb):
+    # Can be improved by retrieving conversion rate from external sauce
+    nzdToThb = 21.49
+    if (isConvertingToThb == True):
+        return float(amount) * nzdToThb
+    else:
+        return float(amount) / nzdToThb
+
+def Challenge2E():
+    currency = input("Pick currency to convert to, THB or NZD? ")
+    amount = input("What is your amount in the original currency? ")
+
+    convertedValue = 0
+    if (currency.lower() == "thb"):
+        convertedValue = CurrencyConverter(amount, True)
+    else:
+        convertedValue = CurrencyConverter(amount, False)
+    
+    print("Your amount (" + amount + ") in " + currency.upper() + " is " + str(convertedValue))
+    
+Challenge2E()
