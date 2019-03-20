@@ -37,7 +37,7 @@ def Challenge1H():
 # Implement a calculate that has impact on daily life (living in bangkok so converting money from Baht to NZD or visa-versa)
 # https://www.reddit.com/r/dailyprogrammer/comments/pjbj8/easy_challenge_2/
 def CurrencyConverter(amount, isConvertingToThb):
-    # Can be improved by retrieving conversion rate from external sauce
+    # Can be improved by retrieving conversion rate from external source
     nzdToThb = 21.49
     if (isConvertingToThb == True):
         return float(amount) * nzdToThb
@@ -55,5 +55,12 @@ def Challenge2E():
         convertedValue = CurrencyConverter(amount, False)
     
     print("Your amount (" + amount + ") in " + currency.upper() + " is " + str(convertedValue))
+
+# Chanllenge (Intermediate)
+# Implement a text adventure calling the user by their name
+# https://www.reddit.com/r/dailyprogrammer/comments/pjbuj/intermediate_challenge_2/
+def Challenge2I():
+    name = input("What's your name? ")
+    rooms = [[]]
     
 Challenge2E()
