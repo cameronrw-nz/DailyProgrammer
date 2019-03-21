@@ -1,3 +1,6 @@
+import random
+import string
+
 # Challenge 1 (easy)
 # Takes in 3 user input and outputs a single string.
 # https://www.reddit.com/r/dailyprogrammer/comments/pih8x/easy_challenge_1/
@@ -56,11 +59,22 @@ def Challenge2E():
     
     print("Your amount (" + amount + ") in " + currency.upper() + " is " + str(convertedValue))
 
-# Chanllenge (Intermediate)
+# Challenge 2(Intermediate)
 # Implement a text adventure calling the user by their name
 # https://www.reddit.com/r/dailyprogrammer/comments/pjbuj/intermediate_challenge_2/
 def Challenge2I():
     name = input("What's your name? ")
     rooms = [[]]
     
-Challenge2E()
+
+#Challenge 4(Easy)
+# Implements a password generator based on length of password and how many passwords.
+# https://www.reddit.com/r/dailyprogrammer/comments/pm6oj/2122012_challenge_4_easy/
+def Challenge4E():
+    lengthOfPasswords = int(input("How long do you want your passwords? ")) 
+    noOfPasswords = int(input("How many passwords do you want? "))
+    passwordChars = string.ascii_uppercase + string.digits + string.ascii_lowercase + string.punctuation
+    for i in range(noOfPasswords):
+        print(''.join(random.choice(passwordChars) for _ in range(lengthOfPasswords)))
+
+Challenge4E() 
